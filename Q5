@@ -1,0 +1,7 @@
+SELECT
+    order_id,
+    order_date,
+    DAY(order_date)   AS order_day,
+    MONTH(order_date) AS order_month,
+    YEAR(order_date)  AS order_year
+FROM orders;
