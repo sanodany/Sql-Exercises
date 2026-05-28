@@ -1,0 +1,6 @@
+SELECT
+    OrderID,
+    OrderDate,
+    DATEPART(QUARTER, OrderDate) AS order_quarter,
+    DATEPART(WEEK,    OrderDate) AS order_week
+FROM Sales.Orders;
