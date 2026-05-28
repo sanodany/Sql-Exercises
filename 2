@@ -1,0 +1,6 @@
+SELECT
+    OrderID,
+    OrderDate,
+    DATETRUNC(MONTH, OrderDate) AS month_start,
+    EOMONTH(OrderDate)          AS month_end
+FROM Sales.Orders;
