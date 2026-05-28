@@ -1,0 +1,8 @@
+select 
+      datepart(QUARTER,OrderDate) Quarter_month,
+      datename(MONTH,OrderDate) month_name,
+      count(*) Total_Orders
+from Sales.Orders
+group by datepart(QUARTER,OrderDate), datename(MONTH,OrderDate),datepart(MONTH,OrderDate)
+having count(*) > 1
+order by datepart(QUARTER,OrderDate),datepart(MONTH,OrderDate)
