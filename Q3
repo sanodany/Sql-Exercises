@@ -1,0 +1,5 @@
+SELECT
+    FirstName + ' ' + ISNULL(LastName,'') AS full_name,
+    DATENAME(WEEKDAY, BirthDate) AS birth_weekday,
+    DATENAME(MONTH,   BirthDate) AS birth_month
+FROM Sales.Employees;
